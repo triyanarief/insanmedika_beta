@@ -1,5 +1,19 @@
-extends layout
+extends partials/header
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    .col-md-3.centered
+      .form-center.bs-component
+        .form-group(action='/' method='POST')
+          label.control-label(for='inputDefault') Name
+          input#inputDefault.form-control(type='text')
+          label.control-label(for='inputDefault') Email
+          input#inputDefault.form-control(type='email')
+          label.control-label(for='inputDefault') Phone Number
+          input#inputDefault.form-control(type='text')
+          label.control-label(for='inputDefault') Password
+          input#inputDefault.form-control(type='password')
+          label.control-label(for='inputDefault') Retype Password
+          input#inputDefault.form-control(type='password')
+          br
+          button(type='button').btn.btn-success Register
