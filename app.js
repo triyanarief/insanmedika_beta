@@ -19,7 +19,7 @@ var dbURI = `mongodb://${process.env.USER_NAME}:${process.env.DB_PASS}@ds031972.
 var app = express();
 
 // mongodb connect
-mongoose.connect('mongodb://insanmedika:INMED2017@ds031972.mlab.com:31972/insanmedika_beta');
+mongoose.connect(dbURI);
 mongoose.connection.on('connected', () => {
   console.log('Mongoose default connection open to ' + dbURI);
 });
